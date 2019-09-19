@@ -1,7 +1,5 @@
 version: "3"
 services:
-  redis-server:
-    image: "redis"
   flask-app:
     build: .
     ports:
