@@ -4,7 +4,7 @@ services:
 before_install:
   - docker build -t karthik540/dev-flask .
 script:
-
+  - echo "Success !"
 after_success:
   - docker build -t karthik540/simple-flask .
 
