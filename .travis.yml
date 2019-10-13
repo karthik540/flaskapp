@@ -1,0 +1,15 @@
+sudo: required
+services:
+  - docker
+before_install:
+
+script:
+
+after_success:
+  - docker build -t karthik540/simple-flask .
+
+  # Login to Docker hub..
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  
+  # Pushing the images...
+  - docker push karthik540/simple-flask
