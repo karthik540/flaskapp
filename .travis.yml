@@ -2,7 +2,7 @@ sudo: required
 services:
   - docker
 before_install:
-
+  - docker build -t karthik540/dev-flask .
 script:
 
 after_success:
